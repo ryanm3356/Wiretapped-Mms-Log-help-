@@ -1,0 +1,649 @@
+Device  : samsung SM-S902L (kltetfnvzw)
+Android : 4.4.2 (S902LUDU3AOG2, KOT49H.S902LUDU3AOG2)
+Memory  : 37M (23.31% free, 128M max)
+Memclass: 128
+OS Host : SWDD6010
+App     : Signal 3.11.1
+
+--------- beginning of /dev/log/main
+W/KeyCachingService(10016): onStartCommand, null
+W/KeyCachingService(10016): foregrounding KCS
+W/service (10016): Broadcasting new secret...
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (read = 0) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (read = 0) ORDER BY date_received ASC)
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (read = 0) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (read = 0) ORDER BY date_received ASC)
+D/dalvikvm(10016): GC_EXPLICIT freed 3041K, 19% free 20759K/25436K, paused 2ms+16ms, total 57ms
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+W/PassphraseRequiredActionBarActivity(10016): onCreate(Bundle[mParcelledData.dataSize=4692])
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+D/AbsListView(10016): Get MotionRecognitionManager
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+D/AbsListView(10016): onVisibilityChanged() is called, visibility : 4
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): onVisibilityChanged() is called, visibility : 0
+D/AbsListView(10016): unregisterIRListener() is called 
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/MessageRetrievalService(10016): Active Count: 1
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+W/WebSocketConnection(10016): Sending keep alive...
+W/OkHttpClientWrapper(10016): onMessage: BINARY
+W/WebSocketConnection(10016): WSC onMessage()
+W/WebSocketConnection(10016): Message Type: 2
+W/MessageRetrievalService(10016): Application level read timeout...
+W/MessageRetrievalService(10016): Network requirement: true, active activities: 1, push pending: 0
+W/MessageRetrievalService(10016): Reading message...
+D/AbsListView(10016): unregisterIRListener() is called 
+D/skia    (10016): GFXPNG PNG bitmap created width:64 height:64 bitmap id is 304 
+D/skia    (10016): GFXPNG PNG bitmap created width:64 height:64 bitmap id is 305 
+D/skia    (10016): GFXPNG PNG bitmap created width:64 height:64 bitmap id is 306 
+D/skia    (10016): GFXPNG PNG bitmap created width:64 height:64 bitmap id is 307 
+D/skia    (10016): GFXPNG PNG bitmap created width:192 height:80 bitmap id is 308 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+I/PersonaManager(10016): getPersonaService() name persona_policy
+D/skia    (10016): GFXPNG PNG bitmap created width:96 height:96 bitmap id is 312 
+D/skia    (10016): GFXPNG PNG bitmap created width:96 height:96 bitmap id is 313 
+D/skia    (10016): GFXPNG PNG bitmap created width:96 height:96 bitmap id is 314 
+D/skia    (10016): GFXPNG PNG bitmap created width:96 height:96 bitmap id is 315 
+D/skia    (10016): GFXPNG PNG bitmap created width:96 height:96 bitmap id is 316 
+D/skia    (10016): GFXPNG PNG bitmap created width:96 height:96 bitmap id is 317 
+D/skia    (10016): GFXPNG PNG bitmap created width:96 height:96 bitmap id is 318 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+W/WebSocketConnection(10016): Sending keep alive...
+W/OkHttpClientWrapper(10016): onMessage: BINARY
+W/WebSocketConnection(10016): WSC onMessage()
+W/WebSocketConnection(10016): Message Type: 2
+W/MessageRetrievalService(10016): Application level read timeout...
+W/MessageRetrievalService(10016): Network requirement: true, active activities: 1, push pending: 0
+W/MessageRetrievalService(10016): Reading message...
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+W/TelephonyUtil(10016): Choosing MCC+MNC info from TelephonyManager.getSimOperator()
+D/AbsListView(10016): unregisterIRListener() is called 
+W/ApnDatabase(10016): Querying table for MCC+MNC 311480 without APN name
+W/ApnDatabase(10016): Returning preferred APN LegacyMmsConnection$Apn{ mmsc: "http://mms.vzwreseller.com/servlets/mms", proxy: none, port: (none), user: none, pass: none }
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+D/AbsListView(10016): unregisterIRListener() is called 
+W/WebSocketConnection(10016): Sending keep alive...
+W/OkHttpClientWrapper(10016): onMessage: BINARY
+W/WebSocketConnection(10016): WSC onMessage()
+W/WebSocketConnection(10016): Message Type: 2
+W/MessageRetrievalService(10016): Application level read timeout...
+W/MessageRetrievalService(10016): Network requirement: true, active activities: 1, push pending: 0
+W/MessageRetrievalService(10016): Reading message...
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+D/dalvikvm(10016): GC_CONCURRENT freed 2440K, 17% free 21563K/25744K, paused 3ms+8ms, total 67ms
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+W/WebSocketConnection(10016): Sending keep alive...
+W/OkHttpClientWrapper(10016): onMessage: BINARY
+W/WebSocketConnection(10016): WSC onMessage()
+W/WebSocketConnection(10016): Message Type: 2
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+D/AbsListView(10016): unregisterIRListener() is called 
+W/MessageRetrievalService(10016): Application level read timeout...
+W/MessageRetrievalService(10016): Network requirement: true, active activities: 1, push pending: 0
+W/MessageRetrievalService(10016): Reading message...
+D/AbsListView(10016): unregisterIRListener() is called 
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+W/WebSocketConnection(10016): Sending keep alive...
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+W/OkHttpClientWrapper(10016): onMessage: BINARY
+W/WebSocketConnection(10016): WSC onMessage()
+W/WebSocketConnection(10016): Message Type: 2
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+W/MessageRetrievalService(10016): Application level read timeout...
+W/MessageRetrievalService(10016): Network requirement: true, active activities: 1, push pending: 0
+W/MessageRetrievalService(10016): Reading message...
+D/AbsListView(10016): unregisterIRListener() is called 
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+D/AbsListView(10016): unregisterIRListener() is called 
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/MessageRetrievalService(10016): Active Count: 1
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+D/AbsListView(10016): unregisterIRListener() is called 
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+W/PassphraseRequiredActionBarActivity(10016): onCreate(Bundle[mParcelledData.dataSize=2156])
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+W/DirectoryRefreshListener(10016): Scheduling for: 1456673873904
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/MessageRetrievalService(10016): Active Count: 1
+W/PassphraseRequiredActionBarActivity(10016): onDestroy()
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+W/WebSocketConnection(10016): Sending keep alive...
+W/OkHttpClientWrapper(10016): onMessage: BINARY
+W/WebSocketConnection(10016): WSC onMessage()
+W/WebSocketConnection(10016): Message Type: 2
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+W/PassphraseRequiredActionBarActivity(10016): onCreate(null)
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+W/ConversationActivity(10016): onCreate()
+W/QuickAttachmentDrawer(10016): updateControlsView()
+D/skia    (10016): GFXPNG PNG bitmap created width:72 height:72 bitmap id is 319 
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+I/dalvikvm(10016): Could not find method android.telephony.SubscriptionManager.from, referenced from method org.thoughtcrime.securesms.util.dualsim.SubscriptionManagerCompat.getActiveSubscriptionInfo
+W/dalvikvm(10016): VFY: unable to resolve static method 11001: Landroid/telephony/SubscriptionManager;.from (Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
+D/dalvikvm(10016): VFY: replacing opcode 0x71 at 0x000d
+I/dalvikvm(10016): Could not find method android.telephony.SubscriptionManager.from, referenced from method org.thoughtcrime.securesms.util.dualsim.SubscriptionManagerCompat.getActiveSubscriptionInfoList
+W/dalvikvm(10016): VFY: unable to resolve static method 11001: Landroid/telephony/SubscriptionManager;.from (Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
+D/dalvikvm(10016): VFY: replacing opcode 0x71 at 0x000e
+I/dalvikvm(10016): Could not find method android.view.Window.getStatusBarColor, referenced from method org.thoughtcrime.securesms.ConversationFragment$ActionModeCallback.onCreateActionMode
+W/dalvikvm(10016): VFY: unable to resolve virtual method 11682: Landroid/view/Window;.getStatusBarColor ()I
+D/dalvikvm(10016): VFY: replacing opcode 0x6e at 0x001a
+I/dalvikvm(10016): Could not find method android.view.Window.setStatusBarColor, referenced from method org.thoughtcrime.securesms.ConversationFragment$ActionModeCallback.onDestroyActionMode
+W/dalvikvm(10016): VFY: unable to resolve virtual method 11692: Landroid/view/Window;.setStatusBarColor (I)V
+D/dalvikvm(10016): VFY: replacing opcode 0x6e at 0x002e
+I/dalvikvm(10016): Could not find method android.view.ViewAnimationUtils.createCircularReveal, referenced from method org.thoughtcrime.securesms.components.AttachmentTypeSelector.animateWindowInCircular
+W/dalvikvm(10016): VFY: unable to resolve static method 11522: Landroid/view/ViewAnimationUtils;.createCircularReveal (Landroid/view/View;IIFF)Landroid/animation/Animator;
+D/dalvikvm(10016): VFY: replacing opcode 0x71 at 0x0022
+I/dalvikvm(10016): Could not find method android.view.ViewAnimationUtils.createCircularReveal, referenced from method org.thoughtcrime.securesms.components.AttachmentTypeSelector.animateWindowOutCircular
+W/dalvikvm(10016): VFY: unable to resolve static method 11522: Landroid/view/ViewAnimationUtils;.createCircularReveal (Landroid/view/View;IIFF)Landroid/animation/Animator;
+D/dalvikvm(10016): VFY: replacing opcode 0x71 at 0x002e
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (thread_id = 4) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (thread_id = 4) ORDER BY date_received DESC LIMIT 500)
+W/TelephonyUtil(10016): Choosing MCC+MNC info from TelephonyManager.getSimOperator()
+W/ApnDatabase(10016): Querying table for MCC+MNC 311480 without APN name
+W/ApnDatabase(10016): Returning preferred APN LegacyMmsConnection$Apn{ mmsc: "http://mms.vzwreseller.com/servlets/mms", proxy: none, port: (none), user: none, pass: none }
+W/KeyboardAwareLinearLayout(10016): rotation changed
+W/KeyboardAwareLinearLayout(10016): onKeyboardClose()
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (read = 0) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (read = 0) ORDER BY date_received ASC)
+W/CameraView(10016): skipping layout due to zero-width/height preview size
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/MessageRetrievalService(10016): Active Count: 1
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+V/WebViewChromium(10016): Binding Chromium to the main looper Looper (main, tid 1) {4245ded8}
+I/chromium(10016): [INFO:library_loader_hooks.cc(112)] Chromium logging enabled: level = 0, default verbosity = 0
+I/BrowserProcessMain(10016): Initializing chromium process, renderers=0
+W/chromium(10016): [WARNING:proxy_service.cc(888)] PAC support disabled because there is no system implementation
+W/PhoneNumberFormatter(10016): Got local CC: US
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+W/PhoneNumberFormatter(10016): Got local CC: US
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+W/PhoneNumberFormatter(10016): Got local CC: US
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+W/PassphraseRequiredActionBarActivity(10016): onDestroy()
+W/ConversationActivity(10016): onBackPressed()
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+W/PassphraseRequiredActionBarActivity(10016): onCreate(Bundle[mParcelledData.dataSize=2156])
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+W/DirectoryRefreshListener(10016): Scheduling for: 1456673873904
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/MessageRetrievalService(10016): Active Count: 1
+W/PassphraseRequiredActionBarActivity(10016): onDestroy()
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (thread_id = 4) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (thread_id = 4) ORDER BY date_received DESC LIMIT 1)
+D/dalvikvm(10016): GC_CONCURRENT freed 8878K, 29% free 27316K/37948K, paused 2ms+14ms, total 66ms
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+I/PersonaManager(10016): getPersonaService() name persona_policy
+W/PassphraseRequiredActionBarActivity(10016): onCreate(null)
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/MessageRetrievalService(10016): Active Count: 1
+W/PassphraseRequiredActionBarActivity(10016): onDestroy()
+I/dalvikvm(10016): Jit: resizing JitTable from 4096 to 8192
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+W/PassphraseRequiredActionBarActivity(10016): onCreate(null)
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+W/ConversationActivity(10016): onCreate()
+W/QuickAttachmentDrawer(10016): updateControlsView()
+D/skia    (10016): GFXPNG PNG bitmap created width:72 height:72 bitmap id is 321 
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (thread_id = 5) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (thread_id = 5) ORDER BY date_received DESC LIMIT 500)
+W/PhoneNumberFormatter(10016): Got local CC: US
+W/TelephonyUtil(10016): Choosing MCC+MNC info from TelephonyManager.getSimOperator()
+W/ApnDatabase(10016): Querying table for MCC+MNC 311480 without APN name
+W/ApnDatabase(10016): Returning preferred APN LegacyMmsConnection$Apn{ mmsc: "http://mms.vzwreseller.com/servlets/mms", proxy: none, port: (none), user: none, pass: none }
+W/KeyboardAwareLinearLayout(10016): rotation changed
+W/KeyboardAwareLinearLayout(10016): onKeyboardClose()
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (read = 0) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (read = 0) ORDER BY date_received ASC)
+W/CameraView(10016): skipping layout due to zero-width/height preview size
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/MessageRetrievalService(10016): Active Count: 1
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+W/PassphraseRequiredActionBarActivity(10016): onDestroy()
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+W/InputEventReceiver(10016): Attempted to finish an input event but the input event receiver has already been disposed.
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+W/IInputConnectionWrapper(10016): showStatusIcon on inactive InputConnection
+W/PassphraseRequiredActionBarActivity(10016): onDestroy()
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (thread_id = 5) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (thread_id = 5) ORDER BY date_received DESC LIMIT 1)
+W/MessageRetrievalService(10016): Application level read timeout...
+W/MessageRetrievalService(10016): Network requirement: false, active activities: 0, push pending: 0
+W/MessageRetrievalService(10016): Shutting down pipe...
+W/WebSocketConnection(10016): WSC disconnect()...
+W/OkHttpClientWrapper(10016): Calling disconnect()...
+W/MessageRetrievalService(10016): Looping...
+W/MessageRetrievalService(10016): Waiting for websocket state change....
+W/MessageRetrievalService(10016): Network requirement: false, active activities: 0, push pending: 0
+W/PassphraseRequiredActionBarActivity(10016): onCreate(Bundle[mParcelledData.dataSize=5928])
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+W/ConversationActivity(10016): onCreate()
+W/QuickAttachmentDrawer(10016): updateControlsView()
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (thread_id = 5) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (thread_id = 5) ORDER BY date_received DESC LIMIT 500)
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+W/PhoneNumberFormatter(10016): Got local CC: US
+W/TelephonyUtil(10016): Choosing MCC+MNC info from TelephonyManager.getSimOperator()
+W/ApnDatabase(10016): Querying table for MCC+MNC 311480 without APN name
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/ApnDatabase(10016): Returning preferred APN LegacyMmsConnection$Apn{ mmsc: "http://mms.vzwreseller.com/servlets/mms", proxy: none, port: (none), user: none, pass: none }
+W/MessageRetrievalService(10016): Active Count: 1
+W/MessageRetrievalService(10016): Network requirement: true, active activities: 1, push pending: 0
+W/MessageRetrievalService(10016): Making websocket connection....
+W/WebSocketConnection(10016): WSC connect()...
+W/OkHttpClientWrapper(10016): Connecting to: wss://textsecure-service.whispersystems.org/v1/websocket/?login=%s&password=%s
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (read = 0) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (read = 0) ORDER BY date_received ASC)
+W/MessageRetrievalService(10016): Network requirement: true, active activities: 1, push pending: 0
+W/MessageRetrievalService(10016): Reading message...
+W/KeyboardAwareLinearLayout(10016): rotation changed
+W/KeyboardAwareLinearLayout(10016): onKeyboardClose()
+W/CameraView(10016): skipping layout due to zero-width/height preview size
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+W/OkHttpClientWrapper(10016): onClose(1000, OK)
+W/WebSocketConnection(10016): onClose()...
+W/WebSocketConnection(10016): onConnected()
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+W/PassphraseRequiredActionBarActivity(10016): onCreate(Bundle[mParcelledData.dataSize=2108])
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/MessageRetrievalService(10016): Active Count: 1
+W/PassphraseRequiredActionBarActivity(10016): onDestroy()
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (thread_id = 5) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (thread_id = 5) ORDER BY date_received DESC LIMIT 1)
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+W/PassphraseRequiredActionBarActivity(10016): onCreate(Bundle[mParcelledData.dataSize=2156])
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+W/DirectoryRefreshListener(10016): Scheduling for: 1456673873904
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/MessageRetrievalService(10016): Active Count: 1
+W/PassphraseRequiredActionBarActivity(10016): onDestroy()
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+W/PassphraseRequiredActionBarActivity(10016): onCreate(null)
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/MessageRetrievalService(10016): Active Count: 1
+W/PassphraseRequiredActionBarActivity(10016): onDestroy()
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+W/PassphraseRequiredActionBarActivity(10016): onCreate(null)
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+W/ConversationActivity(10016): onCreate()
+W/QuickAttachmentDrawer(10016): updateControlsView()
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+W/PhoneNumberFormatter(10016): Got local CC: US
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (thread_id = 5) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (thread_id = 5) ORDER BY date_received DESC LIMIT 500)
+W/TelephonyUtil(10016): Choosing MCC+MNC info from TelephonyManager.getSimOperator()
+W/ApnDatabase(10016): Querying table for MCC+MNC 311480 without APN name
+W/ApnDatabase(10016): Returning preferred APN LegacyMmsConnection$Apn{ mmsc: "http://mms.vzwreseller.com/servlets/mms", proxy: none, port: (none), user: none, pass: none }
+W/KeyboardAwareLinearLayout(10016): rotation changed
+W/KeyboardAwareLinearLayout(10016): onKeyboardClose()
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (read = 0) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (read = 0) ORDER BY date_received ASC)
+W/CameraView(10016): skipping layout due to zero-width/height preview size
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/MessageRetrievalService(10016): Active Count: 1
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+D/ProgressBar(10016): setProgressDrawable drawableHeight = 36
+D/AbsSeekBar(10016): AbsSeekBar Constructor: misSeebarAnimationAvailable = true
+W/PassphraseRequiredActionBarActivity(10016): onDestroy()
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+W/PassphraseRequiredActionBarActivity(10016): onCreate(Bundle[mParcelledData.dataSize=2108])
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/MessageRetrievalService(10016): Active Count: 1
+D/dalvikvm(10016): GC_CONCURRENT freed 5249K, 28% free 27494K/37948K, paused 3ms+15ms, total 60ms
+D/AbsListView(10016): [unregisterDoubleTapMotionListener]
+I/MotionRecognitionManager(10016):   .unregisterListener : / listener count = 0->0,  
+D/AbsListView(10016): unregisterIRListener() is called 
+W/PassphraseRequiredActionBarActivity(10016): onDestroy()
+W/MmsSmsDatabase(10016): Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, transport_type, attachment_id, unique_id, mid, data_size, _data, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (thread_id = 5) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, network_failures, 'mms' AS transport_type, unique_id, NULL AS mid, data_size, NULL AS _data, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (thread_id = 5) ORDER BY date_received DESC LIMIT 1)
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+W/PassphraseRequiredActionBarActivity(10016): onCreate(Bundle[mParcelledData.dataSize=2156])
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+W/DirectoryRefreshListener(10016): Scheduling for: 1456673873904
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+I/PersonaManager(10016): getPersonaService() name persona_policy
+W/MessageRetrievalService(10016): Active Count: 1
+W/PassphraseRequiredActionBarActivity(10016): onDestroy()
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+E/ViewRootImpl(10016): sendUserActionEvent() mView == null
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+W/PassphraseRequiredActionBarActivity(10016): onCreate(null)
+W/ExperienceUpgradeActivity(10016): getExperienceUpgrade(184)
+W/PassphraseRequiredActionBarActivity(10016): routeApplicationState(), state: 0
+W/PassphraseRequiredActionBarActivity(10016): initializeClearKeyReceiver()
+D/AbsListView(10016): Get MotionRecognitionManager
+W/PassphraseRequiredActionBarActivity(10016): onResume()
+D/AbsListView(10016): onVisibilityChanged() is called, visibility : 4
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): onVisibilityChanged() is called, visibility : 0
+D/AbsListView(10016): unregisterIRListener() is called 
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+W/KeyCachingService(10016): Incrementing activity count...
+W/MessageRetrievalService(10016): Active Count: 1
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+W/PassphraseRequiredActionBarActivity(10016): onDestroy()
+W/WebSocketConnection(10016): Sending keep alive...
+D/AbsListView(10016): onDetachedFromWindow
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): Get MotionRecognitionManager
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+D/AbsListView(10016): unregisterIRListener() is called 
+W/PassphraseRequiredActionBarActivity(10016): onPause()
+D/AbsListView(10016): unregisterIRListener() is called 
+W/KeyCachingService(10016): onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+W/KeyCachingService(10016): Decrementing activity count...
+W/KeyCachingService(10016): Starting timeout: 300000
+W/MessageRetrievalService(10016): Active Count: 0
+I/PersonaManager(10016): getPersonaService() name persona_policy
